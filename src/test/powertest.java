@@ -1,26 +1,30 @@
 package powerpackage;
 
 
-import org.junit.Test;
+import org.junit.Assert.assertEquals;
 
+// following PascalCase convention for class name
+// following camelCase convention for method name
+// Updating method calls to reflect change made in java file
+// swapping assert to assertEquals() for better error messages
 public class powertest {
     @Test
-    public void one_raised_to_one_is_onew() {
-        assert powerfinder.OF(1,1) == 1;
+    public void oneRaisedToOneIsOne() {
+        assertEquals(PowerFinder.findPow(1, 1));
     }
 
     @Test
-    public void twoRaised_to_one_is_2() {
-        assert powerfinder.OF(2,1) == 2;
+    public void twoRaisedToOneIsTwo() {
+        assertEquals(PowerFinder.findPow(2, 1));
     }
 
     @Test
-    public void two_power_2_is_4() {
-        assert powerfinder.OF(2, 2) == 4;
+    public void twoPowerTwoIsFour() {
+        assertEquals(PowerFinder.findPow(2, 2));
     }
 
     @Test
-    public void power_of_2_and_3_Is_SIX() {
-        assert powerfinder.OF(3, 2) == 3*3;
+    public void powerOfTwoAndThreeIsSix() {
+        assertEquals(PowerFinder.findPow(3, 2));
     }
 }
